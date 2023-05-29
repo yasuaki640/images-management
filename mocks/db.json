@@ -1,0 +1,78 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "ichika",
+      "height": 140,
+      "cup": "I",
+      "favorabilityRating": 1,
+      "images": [
+        "https://i.gyazo.com/c3d108b4d5566bab7d594c4956c3a406.jpg",
+        "https://i.gyazo.com/cf6bd94d7418c47cb3f0025e5f09baa0.jpg",
+        "https://i.gyazo.com/d09270cf307a074b1898e17c15bd4492.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "risa",
+      "height": 156,
+      "cup": "F",
+      "favorabilityRating": 1,
+      "images": [
+        "https://i.gyazo.com/4163f43808a73fcb57d9e9e2d6588eb7.jpg",
+        "https://i.gyazo.com/a8544b45422fca0ba99b1faef91e8534.jpg",
+        "https://i.gyazo.com/2f82fc257b16d3b9b4f99a0d18ec1c3c.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "yuno",
+      "height": 150,
+      "cup": "F",
+      "favorabilityRating": 1,
+      "images": [
+        "https://i.gyazo.com/b42440b261471b3e1457b50fa9155eac.jpg",
+        "https://i.gyazo.com/d64ca456f4dd143b367e1d432578a4c3.jpg",
+        "https://i.gyazo.com/95436122454d52410f3e9c0460cc5941.jpg",
+        "https://i.gyazo.com/c42ce699a9c1c04a38027843a5d115e0.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "umi",
+      "height": 150,
+      "cup": "G",
+      "favorabilityRating": 1,
+      "images": [
+        "https://i.gyazo.com/55c2118ec6cd9d8acb87907bf26fbd5a.jpg",
+        "https://i.gyazo.com/efeab0251f0198a34c1b18b838741f62.jpg",
+        "https://i.gyazo.com/be7330405578ba7759ce6b9c269f6d44.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "mariya",
+      "height": 150,
+      "cup": "D",
+      "favorabilityRating": 1,
+      "images": [
+        "https://contents.oricon.co.jp/cdn-cgi/image/width=750,quality=85,format=auto/upimg/news/20200811/2169177_202008110336120001597113616e.jpg"
+      ]
+    },
+    {
+      "name": "yuzuha",
+      "cup": "G",
+      "height": 155,
+      "images": [
+        "https://mizugazo.com/wp-content/uploads/2023/02/FE090549-F0FF-450C-9290-64C5CCD32B85-1536x1011.jpeg",
+        "https://mizugazo.com/wp-content/uploads/2023/02/929F4AE8-85DE-4C9A-ACCF-1C2A03B87150-768x1085.jpeg",
+        "https://mizugazo.com/wp-content/uploads/2023/01/9E6EFD68-6199-4DAB-A888-E84749E062B3.jpeg",
+        "https://mizugazo.com/wp-content/uploads/2023/01/F1D5E5C5-6AA1-4502-9457-3CF528429327-768x1087.jpeg",
+        "https://mizugazo.com/wp-content/uploads/2023/02/27F4AE68-A314-4B09-9D84-4BD54ECFACAA-1166x1536.jpeg",
+        "https://mizugazo.com/wp-content/uploads/2023/02/3287BF44-971F-4D0B-A6EE-8740F46B52A0-1167x1536.jpeg"
+      ],
+      "favorabilityRating": 0,
+      "id": 6
+    }
+  ]
+}
