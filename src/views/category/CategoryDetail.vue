@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onBeforeMount } from "vue";
 import { useCategoryDetail } from "@/hooks/category/useCategoryDetail";
-import ImageCard from "@/components/parts/ImageCard/ImageCard.vue";
+import ImageList from "@/components/parts/ImageList/ImageList.vue";
 
 const { category, fetchCategoryDetail, loading } = useCategoryDetail();
 
@@ -24,14 +24,7 @@ onBeforeMount(async () => {
       <dd>{{ category.id }}</dd>
       <dt>Name</dt>
       <dd>{{ category.name }}</dd>
-
-      <div v-for="{ url } in category.images" id="category-images" :key="url">
-        <el-row>
-          <el-col :span="8"><ImageCard :image="url" /></el-col>
-          <el-col :span="8"><ImageCard :image="url" /></el-col>
-          <el-col :span="8"><ImageCard :image="url" /></el-col>
-        </el-row>
-      </div>
+      <ImageList :images="category.images" />
     </dl>
   </section>
 </template>

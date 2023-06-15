@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import ImageCard from "@/components/parts/ImageCard/ImageCard.vue";
 import { computed } from "vue";
+import type { Image } from "@/types/Image";
 
-const props = defineProps<{ images: string[] }>();
+const props = defineProps<{ images: Pick<Image, "url">[] }>();
 
 const chunkSize = 3;
 const chunkedImages = computed(() => {
@@ -22,8 +23,8 @@ const chunkedImages = computed(() => {
     class="row"
     :gutter="20"
   >
-    <el-col v-for="image in row" :key="image" :span="8">
-      <ImageCard :image="image" />
+    <el-col v-for="image in row" :key="image.url" :span="8">
+      <ImageCard :image="image.url" />
     </el-col>
   </el-row>
 </template>
