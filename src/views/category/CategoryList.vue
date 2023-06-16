@@ -22,6 +22,8 @@ onBeforeMount(async () => {
   </section>
   <section v-if="loading">Loading...</section>
   <section v-else>
-    <CategoryTable :categories="categoryList" @row-click="handleRowClick" />
+    <el-row>
+      <CategoryTable :categories="categoryList" @row-click="handleRowClick" />
+    </el-row>
   </section>
 </template>

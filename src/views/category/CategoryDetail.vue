@@ -21,7 +21,25 @@ onBeforeMount(async () => {
 <template>
   <section v-if="loading || !category">Loading...</section>
   <section v-else>
-    <CategoryDescription :num-of-images="numOfImages || 0" :category="category" />
-    <ImageList :images="category.images" />
+    <el-row>
+      <el-col :span="6">
+        <CategoryDescription :num-of-images="numOfImages || 0" :category="category" />
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col>
+        <ImageList :images="category.images" />
+      </el-col>
+    </el-row>
   </section>
 </template>
+
+<style scoped>
+.el-row {
+  margin-bottom: 2vh;
+}
+
+.el-row:last-child {
+  margin-bottom: 2vh;
+}
+</style>

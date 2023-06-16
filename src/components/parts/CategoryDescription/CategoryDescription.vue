@@ -15,9 +15,3 @@ defineProps<Props>();
     <el-descriptions-item label="Number of Images">{{ numOfImages }}</el-descriptions-item>
   </el-descriptions>
 </template>
-
-<style scoped>
-:deep(.el-descriptions__cell.el-descriptions__label.is-bordered-label) {
-  width: 15vw;
-}
-</style>
