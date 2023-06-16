@@ -17,13 +17,20 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <section>
-    <h2>Category List</h2>
-  </section>
-  <section v-if="loading">Loading...</section>
-  <section v-else>
-    <el-row>
-      <CategoryTable :categories="categoryList" @row-click="handleRowClick" />
-    </el-row>
-  </section>
+  <el-row>
+    <el-col :span="18" :offset="3">
+      <div v-if="loading">
+        <p class="loading">Loading...</p>
+      </div>
+      <div v-else>
+        <CategoryTable :categories="categoryList" @row-click="handleRowClick" />
+      </div>
+    </el-col>
+  </el-row>
 </template>
+
+<style scoped>
+.loading {
+  text-align: center;
+}
+</style>

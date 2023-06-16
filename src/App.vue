@@ -12,25 +12,18 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <header>
-    <h1>My Images App</h1>
-    <OutlinedButton
-      v-if="loginUserStore.isLoggedIn"
-      label="Sign out"
-      :disabled="loginUserStore.loading"
-      @click="loginUserStore.signOut"
-    />
-  </header>
   <el-container>
+    <el-header>
+      <h1>My Images App</h1>
+      <OutlinedButton
+        v-if="loginUserStore.isLoggedIn"
+        label="Sign out"
+        :disabled="loginUserStore.loading"
+        @click="loginUserStore.signOut"
+      />
+    </el-header>
     <el-main>
       <RouterView />
     </el-main>
   </el-container>
 </template>
-
-<style>
-main {
-  border: blue 1px solid;
-  padding: 10px;
-}
-</style>
