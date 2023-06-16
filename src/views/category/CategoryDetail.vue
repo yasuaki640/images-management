@@ -22,7 +22,7 @@ onBeforeMount(async () => {
   <section v-if="loading || !category">Loading...</section>
   <section v-else>
     <el-row>
-      <el-col :span="6">
+      <el-col :span="8">
         <CategoryDescription :num-of-images="numOfImages || 0" :category="category" />
       </el-col>
     </el-row>

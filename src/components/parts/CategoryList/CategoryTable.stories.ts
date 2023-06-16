@@ -16,20 +16,20 @@ const meta: Meta<typeof CategoryTable> = {
       {
         id: 1,
         name: "test1",
-        created_at: "2023-04-23 11:13:13",
-        updated_at: "2023-06-11 10:33:44"
+        created_at: "2023/05/30 09:07:36",
+        updated_at: "2023/05/30 09:07:36"
       },
       {
         id: 2,
         name: "test2",
-        created_at: "2023-04-25 11:13:13",
-        updated_at: "2023-06-11 10:33:44"
+        created_at: "2023/05/30 09:07:36",
+        updated_at: "2023/05/30 09:07:36"
       },
       {
         id: 3,
         name: "test3",
-        created_at: "2023-05-25 11:13:13",
-        updated_at: "2023-08-11 10:33:44"
+        created_at: "2023/05/30 09:07:36",
+        updated_at: "2023/05/30 09:07:36"
       }
     ] as Category[]
   }
