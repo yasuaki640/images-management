@@ -2,7 +2,8 @@
 import { RouterView } from "vue-router";
 import { onBeforeMount } from "vue";
 import { useLoginUserStore } from "@/store/loginUser";
-import OutlinedButton from "@/components/parts/Button/OutlinedButton.vue";
+import TheHeader from "@/components/parts/TheHeader/TheHeader.vue";
+import router from "@/router";
 
 const loginUserStore = useLoginUserStore();
 
@@ -14,12 +15,11 @@ onBeforeMount(async () => {
 <template>
   <el-container>
     <el-header>
-      <h1>My Images App</h1>
-      <OutlinedButton
-        v-if="loginUserStore.isLoggedIn"
-        label="Sign out"
-        :disabled="loginUserStore.loading"
-        @click="loginUserStore.signOut"
+      <TheHeader
+        :is-logged-in="loginUserStore.isLoggedIn"
+        :logout-disabled="loginUserStore.loading"
+        @back-click="router.push({ name: 'CategoryTop' })"
+        @logout-click="loginUserStore.signOut"
       />
     </el-header>
     <el-main>

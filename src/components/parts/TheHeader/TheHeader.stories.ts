@@ -7,11 +7,13 @@ const meta: Meta<typeof TheHeader> = {
   tags: ["autodocs"],
   argTypes: {
     isLoggedIn: { control: "boolean" },
+    logoutDisabled: { control: "boolean" },
     onBackClick: { action: "onBackClick" },
     onLogoutClick: { action: "onLogoutClick" }
   },
   args: {
-    isLoggedIn: false
+    isLoggedIn: false,
+    logoutDisabled: false
   }
 };
 
@@ -23,5 +25,12 @@ export const Default: Story = {};
 export const LoggedIn: Story = {
   args: {
     isLoggedIn: true
+  }
+};
+
+export const LogoutDisabled: Story = {
+  args: {
+    isLoggedIn: true,
+    logoutDisabled: true
   }
 };

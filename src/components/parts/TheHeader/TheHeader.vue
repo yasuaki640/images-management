@@ -2,7 +2,10 @@
 import { Picture } from "@element-plus/icons-vue";
 import OutlinedButton from "@/components/parts/Button/OutlinedButton.vue";
 
-type Props = { isLoggedIn: boolean };
+type Props = {
+  isLoggedIn: boolean;
+  logoutDisabled: boolean;
+};
 defineProps<Props>();
 
 const emits = defineEmits(["backClick", "logoutClick"]);
@@ -18,7 +21,12 @@ const onLogoutClicked = () => {
 <template>
   <el-page-header title="Images Management App" :icon="Picture" @back="onBackClicked">
     <template v-if="isLoggedIn" #extra>
-      <OutlinedButton id="logout-button" label="Logout" @click="onLogoutClicked" />
+      <OutlinedButton
+        id="logout-button"
+        label="Logout"
+        :disabled="logoutDisabled"
+        @click="onLogoutClicked"
+      />
     </template>
   </el-page-header>
 </template>
