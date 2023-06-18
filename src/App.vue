@@ -17,7 +17,7 @@ onBeforeMount(async () => {
     <el-header>
       <TheHeader
         :is-logged-in="loginUserStore.isLoggedIn"
-        :logout-disabled="loginUserStore.loading"
+        :loading="loginUserStore.loading"
         @back-click="router.push({ name: 'CategoryTop' })"
         @logout-click="loginUserStore.signOut"
       />

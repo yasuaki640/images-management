@@ -4,7 +4,7 @@ import OutlinedButton from "@/components/parts/Button/OutlinedButton.vue";
 
 type Props = {
   isLoggedIn: boolean;
-  logoutDisabled: boolean;
+  loading: boolean;
 };
 defineProps<Props>();
 
@@ -24,7 +24,7 @@ const onLogoutClicked = () => {
       <OutlinedButton
         id="logout-button"
         label="Logout"
-        :disabled="logoutDisabled"
+        :loading="loading"
         @click="onLogoutClicked"
       />
     </template>
@@ -35,6 +35,7 @@ const onLogoutClicked = () => {
 .el-page-header {
   background-color: var(--el-color-info-light-7);
   padding: 10px 5px;
+  border-radius: var(--el-border-radius-base);
 }
 #logout-button {
   margin-right: 8px;
