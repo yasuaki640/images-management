@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     CategoryDescription: typeof import('./src/components/parts/CategoryDescription/CategoryDescription.vue')['default']
     'CategoryDescription.bk': typeof import("./src/components/parts/CategoryDescription/CategoryDescription.vue")["default"]
+    CategoryEditForm: typeof import('./src/components/parts/CategoryEditForm/CategoryEditForm.vue')['default']
     CategoryTable: typeof import('./src/components/parts/CategoryList/CategoryTable.vue')['default']
     DangerButton: typeof import('./src/components/parts/Button/DangerButton.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
@@ -20,6 +21,7 @@ declare module 'vue' {
     ElHeader: typeof import('element-plus/es')['ElHeader']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElImage: typeof import('element-plus/es')['ElImage']
+    ElInput: typeof import('element-plus/es')['ElInput']
     ElMain: typeof import('element-plus/es')['ElMain']
     ElPageHeader: typeof import('element-plus/es')['ElPageHeader']
     ElRow: typeof import('element-plus/es')['ElRow']
@@ -31,6 +33,7 @@ declare module 'vue' {
     OutlinedButton: typeof import('./src/components/parts/Button/OutlinedButton.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TextInput: typeof import('./src/components/parts/TextInput/TextInput.vue')['default']
     TheHeader: typeof import('./src/components/parts/TheHeader/TheHeader.vue')['default']
     WarningButton: typeof import('./src/components/parts/Button/WarningButton.vue')['default']
   }
