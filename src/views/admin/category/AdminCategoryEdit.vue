@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { useEditCategory } from "@/hooks/category/useEditCategory";
+import { toRefs } from "vue";
 
 type Props = {
   id: number;
 };
 const props = defineProps<Props>();
 
-const { categoryInput, confirmEdit, loading, confirming } = useEditCategory(props.id);
+const { id } = toRefs(props);
+const { categoryInput, confirmEdit, loading, confirming } = useEditCategory(id.value);
 </script>
 
 <template>
