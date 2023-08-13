@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/vue3-vite";
+import { mergeConfig } from "vite";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
@@ -16,6 +17,14 @@ const config: StorybookConfig = {
   },
   core: {
     disableTelemetry: true
-  }
+  },
+  viteFinal: (config) =>
+    mergeConfig(config, {
+      server: {
+        watch: {
+          ignored: ["**/.env"]
+        }
+      }
+    })
 };
 export default config;
