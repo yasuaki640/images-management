@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import TheButton from "@/components/parts/Button/WarningButton.vue";
+import PrimaryButton from "@/components/parts/Button/PrimaryButton.vue";
 
-const meta: Meta<typeof TheButton> = {
+const meta: Meta<typeof PrimaryButton> = {
   title: "Button/PrimaryButton",
-  component: TheButton,
+  component: PrimaryButton,
   tags: ["autodocs"],
   argTypes: {
     label: { control: "text" },
@@ -22,7 +22,7 @@ const meta: Meta<typeof TheButton> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof TheButton>;
+type Story = StoryObj<typeof PrimaryButton>;
 
 export const Default: Story = {
   args: { size: "default" }

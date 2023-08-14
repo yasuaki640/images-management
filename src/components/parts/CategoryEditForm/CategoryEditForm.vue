@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import TextInput from "@/components/parts/TextInput/TextInput.vue";
+import PrimaryButton from "@/components/parts/Button/PrimaryButton.vue";
 
 type Props = {
   id: number;
@@ -8,25 +9,22 @@ type Props = {
 const props = defineProps<Props>();
 
 const emits = defineEmits<{
-  (event: "update:name", value: string): void;
+  "update:name": [value: string];
+  submit: [props: Props];
 }>();
 </script>
 
 <template>
-  <form>
-    <input hidden :value="props.id" />
-    <dl>
-      <dt>
-        <label for="addName">Name</label>
-      </dt>
-      <dd>
-        <TextInput
-          id="addName"
-          :model-value="props.name"
-          @update:model-value="emits('update:name', $event)"
-        />
-      </dd>
-    </dl>
-    <button type="submit">Edit</button>
-  </form>
+  <el-form>
+    <el-form-item label="Name">
+      <TextInput
+        id="addName"
+        :model-value="props.name"
+        @update:model-value="emits('update:name', $event)"
+      />
+    </el-form-item>
+    <el-form-item>
+      <PrimaryButton label="submit" @click="emits('submit', props)">Submit</PrimaryButton>
+    </el-form-item>
+  </el-form>
 </template>

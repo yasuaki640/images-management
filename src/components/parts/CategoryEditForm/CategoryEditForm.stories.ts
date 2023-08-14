@@ -8,7 +8,8 @@ const meta: Meta<typeof CategoryEditForm> = {
   argTypes: {
     id: { control: "number" },
     name: { control: "text" },
-    "onUpdate:name": { action: "update:name" }
+    "onUpdate:name": { action: "update:name" },
+    onSubmit: { action: "submit" }
   },
   args: {
     id: 1,
@@ -26,6 +27,10 @@ export const Default: Story = {
       return { args };
     },
     template: `
-      <CategoryEditForm v-bind="args" v-model:name="args.name" />`
+      <CategoryEditForm 
+        v-bind="args"
+        v-model:name="args.name"
+        :id="args.id"
+      />`
   })
 };
