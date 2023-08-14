@@ -22,7 +22,7 @@ const config: StorybookConfig = {
     mergeConfig(config, {
       server: {
         watch: {
-          ignored: ["**/.env"]
+          ignored: ["**/.env", "**/.env.*"]
         }
       }
     })
