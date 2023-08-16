@@ -3,8 +3,8 @@
 <template>
   <h1>Top</h1>
   <section>
-    <div>
+    <nav>
       <RouterLink :to="{ name: 'CategoryList' }"> Go to category list.</RouterLink>
-    </div>
+    </nav>
   </section>
 </template>
