@@ -29,6 +29,7 @@ declare module 'vue' {
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     ImageCard: typeof import('./src/components/parts/ImageCard/ImageCard.vue')['default']
     ImageList: typeof import('./src/components/parts/ImageList/ImageList.vue')['default']
+    LoginForm: typeof import('./src/components/parts/LoginForm/LoginForm.vue')['default']
     OutlinedButton: typeof import('./src/components/parts/Button/OutlinedButton.vue')['default']
     PrimaryButton: typeof import('./src/components/parts/Button/PrimaryButton.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
@@ -36,5 +37,8 @@ declare module 'vue' {
     TextInput: typeof import('./src/components/parts/TextInput/TextInput.vue')['default']
     TheHeader: typeof import('./src/components/parts/TheHeader/TheHeader.vue')['default']
     WarningButton: typeof import('./src/components/parts/Button/WarningButton.vue')['default']
+  }
+  export interface ComponentCustomProperties {
+    vLoading: typeof import('element-plus/es')['ElLoadingDirective']
   }
 }
