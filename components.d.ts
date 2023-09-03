@@ -7,6 +7,8 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    CategoryAddForm: typeof import('./src/components/parts/CategoryAddForm/CategoryAddForm.vue')['default']
+    CategoryAddorm: typeof import('./src/components/parts/CategoryAddForm/CategoryAddorm.vue')['default']
     CategoryDescription: typeof import('./src/components/parts/CategoryDescription/CategoryDescription.vue')['default']
     CategoryEditForm: typeof import('./src/components/parts/CategoryEditForm/CategoryEditForm.vue')['default']
     CategoryTable: typeof import('./src/components/parts/CategoryList/CategoryTable.vue')['default']
