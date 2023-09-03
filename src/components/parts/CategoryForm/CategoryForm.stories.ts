@@ -1,8 +1,8 @@
 import type { Args, Meta, StoryObj } from "@storybook/vue3";
-import CategoryAddForm from "@/components/parts/CategoryAddForm/CategoryAddForm.vue";
+import CategoryAddForm from "@/components/parts/CategoryForm/CategoryForm.vue";
 
 const meta: Meta<typeof CategoryAddForm> = {
-  title: "CategoryAddForm/CategoryAddForm",
+  title: "CategoryForm/CategoryForm",
   component: CategoryAddForm,
   tags: ["autodocs"],
   argTypes: {

@@ -31,6 +31,7 @@ watch(
 );
 
 const handleSubmitClick = async () => {
+  disabledSubmit.value = true;
   await formRef.value?.validate((valid) => {
     if (valid) emits("submit", props);
   });
