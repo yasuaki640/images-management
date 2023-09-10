@@ -22,3 +22,5 @@ const emits = defineEmits<{
     @input="emits('update:modelValue', $event)"
   />
 </template>
+
+<style></style>
