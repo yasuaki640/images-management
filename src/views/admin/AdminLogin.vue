@@ -16,14 +16,17 @@ const sendMagicLink = async (email: string) => {
 
   try {
     const emailRedirectTo = resolveUrl("AdminCategoryList");
-    await supabase.auth.signInWithOtp({
+    const res = await supabase.auth.signInWithOtp({
       email,
       options: { emailRedirectTo }
     });
+    if (res.error) throw new Error(res.error.message);
+
     showMessage("Successfully sent login mail.", "success");
-    emailInput.value = "";
   } catch (e) {
     showMessage("An unexpected error occurred.", "error");
+  } finally {
+    emailInput.value = "";
   }
 
   sending.value = false;
