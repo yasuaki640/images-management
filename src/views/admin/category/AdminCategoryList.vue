@@ -4,7 +4,7 @@ import router from "@/router";
 import { useAllCategories } from "@/hooks/category/useAllCategories";
 import CategoryTable from "@/components/parts/CategoryList/CategoryTable.vue";
 import type { Category } from "@/types/Category";
-import PrimaryButton from "@/components/parts/Button/WarningButton.vue";
+import PrimaryButton from "@/components/parts/Button/PrimaryButton.vue";
 
 const { categoryList, loading, fetchAllCategories } = useAllCategories();
 
@@ -22,8 +22,22 @@ onBeforeMount(async () => {
     <h2>Category List</h2>
     <PrimaryButton label="Register Category" @click="router.push({ name: 'AdminCategoryAdd' })" />
   </section>
-  <section v-if="loading">Loading...</section>
-  <section v-else>
-    <CategoryTable :categories="categoryList" @row-click="handleRowClick" />
+  <section>
+    <el-row>
+      <el-col :span="18" :offset="3">
+        <div v-if="loading">
+          <p class="loading">Loading...</p>
+        </div>
+        <div v-else>
+          <CategoryTable :categories="categoryList" @row-click="handleRowClick" />
+        </div>
+      </el-col>
+    </el-row>
   </section>
 </template>
+
+<style scoped>
+.loading {
+  text-align: center;
+}
+</style>
