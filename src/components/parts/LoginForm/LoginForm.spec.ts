@@ -55,13 +55,11 @@ describe("LoginForm", () => {
       }
     });
 
-    await wrapper.get("input").setValue("test@example.com");
-    await wrapper.setProps({ email: "a@a.com" });
+    await wrapper.setProps({ email: "test@example.com" });
     await wrapper.get("input").trigger("blur");
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1));
     await wrapper.get("button").trigger("click");
-    await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    expect(wrapper.emitted()).toHaveProperty("sendMagicLink");
+    expect(wrapper.emitted().sendMagicLink).toStrictEqual([["test@example.com"]]);
   });
 });
